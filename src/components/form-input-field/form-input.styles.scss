@@ -1,0 +1,16 @@
+.group{
+    display: flex;
+    flex-direction: column-reverse;
+
+    label{
+        margin-top: 20px;
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid gray;
+        margin-bottom: 20px;
+        &:focus{
+            border: none;
+        }
+    }
+}

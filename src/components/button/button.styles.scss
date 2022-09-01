@@ -1,0 +1,21 @@
+.button-container{
+    border: 1px solid black;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 400;
+
+    &.inverted-button{
+        background-color: #fff;
+        color: #000;
+    }
+    &.inverted-button:hover{
+        background-color: #000;
+        color: #fff;
+    }
+
+    &.google-signin-button{
+        background-color: #357ae8;
+        color: #fff;
+        border: none;
+    }
+}
