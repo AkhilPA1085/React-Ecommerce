@@ -8,12 +8,12 @@
     text-transform: uppercase;
 
     &.inverted-button{
-        background-color: #fff;
-        color: #000;
-    }
-    &.inverted-button:hover{
         background-color: #000;
         color: #fff;
+    }
+    &.inverted-button:hover{
+        background-color: #fff;
+        color: #000;
     }
 
     &.google-signin-button{
