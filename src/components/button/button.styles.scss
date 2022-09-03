@@ -1,8 +1,11 @@
 .button-container{
     border: 1px solid black;
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 15px 15px;
+    font-size: 16px;
     font-weight: 400;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
 
     &.inverted-button{
         background-color: #fff;

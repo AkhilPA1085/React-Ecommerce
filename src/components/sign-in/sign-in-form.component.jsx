@@ -16,34 +16,40 @@ const SignIn = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
+  // const { setCurrentUser } = useContext(UserContext);
+
   const resetFormField = () => {
     setFormFields(defaultFormFields);
   };
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(email,password)
-      console.log(response);
+      const { user } = await signInAuthUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      // setCurrentUser(user); //context
+
       resetFormField();
     } catch (error) {
-      switch(error.code){
-        case 'auth/wrong-password':
+      switch (error.code) {
+        case "auth/wrong-password":
           alert("Wrong Password");
           break;
 
-        case 'auth/user-not-found':
-          alert("Wrong Email");  
+        case "auth/user-not-found":
+          alert("Wrong Email");
           break;
-        
-        default :
-          console.log(error)  
+
+        default:
+          console.log(error);
       }
     }
   };
@@ -83,7 +89,6 @@ const SignIn = () => {
           <Button type="button" buttonType="google" onClick={signInWithGoogle}>
             Sign In with Google
           </Button>
-
         </div>
       </form>
     </div>

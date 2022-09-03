@@ -10,4 +10,9 @@
 }
 .nav-link{
     text-transform: uppercase;
+    color: #000;
+
+    &:hover{
+        color: #000;
+    }
 }
